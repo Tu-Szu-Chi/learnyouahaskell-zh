@@ -522,7 +522,7 @@ shortLinesOnly input =
 
 我們把 I/O 部份的程式碼弄得很短。由於程式的行為是接某些輸入，作些處理然後輸出。我們可以把他想成讀取輸入，呼叫一個函數，然後把函數的結果輸出。
 
-``shortLinesOnly`` 的行為是這樣：拿到一個字串，像是 ``"short\nlooooooooooooooong\nshort again"``。這字串有三行，前後兩行比較短，中間一行很常。他用 ``lines`` 把字串分成 ``["short", "looooooooooooooong", "short again"]``，並把結果綁定成 ``allLines``。然後過濾這些字串，只有少於十個字元的留下，``["short", "short again"]``，最後用 ``unlines`` 把這些字串用換行接起來，形成 ``"short\nshort again"``
+``shortLinesOnly`` 的行為是這樣：拿到一個字串，像是 ``"short\nlooooooooooooooong\nshort again"``。這字串有三行，前後兩行比較短，中間一行很長。他用 ``lines`` 把字串分成 ``["short", "looooooooooooooong", "short again"]``，並把結果綁定成 ``allLines``。然後過濾這些字串，只有少於十個字元的留下，``["short", "short again"]``，最後用 ``unlines`` 把這些字串用換行接起來，形成 ``"short\nshort again"``
 
 ```haskell
 i'm short
